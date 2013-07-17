@@ -1,4 +1,4 @@
-module TaskHelper
+module ProcessHelper
 
   # Executes another task as a separate process
   # @param fire_and_forget Flag that decides whether to block or not until the subprocess is done

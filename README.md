@@ -1,4 +1,4 @@
-#ProcessTaskHelper
+#ProcessHelper
 
 A small and academic library that works with Unix processes using Ruby.
 This library provides a module that you can add to your classes and will let you create sub processes for specific tasks for cases when you want to keep memory under control or want to avoid IO blocking calls by delegating them to another process.
@@ -13,7 +13,7 @@ Usage:
 ```ruby
 class Stats
   #Include module
-  include TaskHelper
+  include ProcessHelper
 
   def initialize
     @counters = Hash.new
@@ -64,7 +64,7 @@ Benchmark.bmbm do |x|
     end
   end
 
-  #Blocking until tasks are done
+  #Directly call your method
   x.report "Direct call" do
     10.times do
       stats.persist "Tracked event @ #{Time.new}"
